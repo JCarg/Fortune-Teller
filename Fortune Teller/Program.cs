@@ -10,96 +10,158 @@ namespace Fortune_Teller
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the most accurate virtual fortune telling system on the web.");
-            Console.WriteLine("Let's Begin!\a");
+                Console.WriteLine("Welcome to the most accurate virtual fortune telling system on the web.");
+                Console.WriteLine("Let's Begin!\a");
+
+                //Name Info
+                Console.WriteLine("What is your first name? Type answers below.");
+                string firstname = Console.ReadLine();
+                Console.WriteLine("\nWhat is your last name?");
+                string lastname = Console.ReadLine();
+
+                //Age Info
+                Console.WriteLine("\nWhat is your age?");
+                int age = int.Parse(Console.ReadLine());
+                string years = " ";
+                string ageodd = "800 Years";
+                string ageeven = "5 years";
+                if (age % 2 > 0)
+                {
+                    years = ageodd;
+                }
+                else
+                {
+                    years = ageeven;
+                }
 
 
-            Console.WriteLine("What is your first name? Type answers below.");
-            string firstname=Console.ReadLine();
-            Console.WriteLine("\nWhat is your last name?");
-            string lastname = Console.ReadLine();
+                //Birth month Info
+                Console.WriteLine("\nWhat is your birth month? Ex: October = 10");
+                int birthmonth = int.Parse(Console.ReadLine());
+                if (birthmonth >= 1 && birthmonth <= 4)
+                {
+                    int janaprilcash = 1000000;
+                    birthmonth = janaprilcash;
+                }
+                else if (birthmonth >= 5 && birthmonth <= 8)
+                {
+                    int mayaugustcash = 500000;
+                    birthmonth = mayaugustcash;
+                }
+                else if (birthmonth >= 9 && birthmonth <= 12)
+                {
+                    int septdecemcash = 2;
+                    birthmonth = septdecemcash;
+                }
+                else
+                {
+                    int nomonth = 0;
+                    birthmonth = nomonth;
+                }
 
-            Console.WriteLine("\nWhat is your age?");
-            int age = int.Parse(Console.ReadLine());
-            short oddretireyears = 800;
-            byte evenretireyears = 5;
-            if (age%2>0)
-            {
-                Console.WriteLine("You will retire in " + oddretireyears + " years.");
-            }      
-            else
-            {
-                Console.WriteLine("You will retire in " + evenretireyears + " years.");
+                //Favorite Color Info
+                Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
+                Console.WriteLine("If you would a list of ROYGBIV colors type help.");
+                string color = Console.ReadLine();
+                string help = color.ToLower();
+                if (help == "help")
+                {
+                    Console.Write("\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet\n");
+                    Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
+                    string helpcolor = Console.ReadLine();
+                    color = helpcolor.ToLower();
+                switch (color)
+                {
+                    case ("red"):
+                        string redtransportation = "Maserati";
+                        color = redtransportation;
+                        break;
+                    case ("blue"):
+                        string bluetransportation = "The Tardis";
+                        color = bluetransportation;
+                        break;
+                    case ("orange"):
+                        string orangetransportation = "Hot air balloon";
+                        color = orangetransportation;
+                        break;
+                    case ("yellow"):
+                        string yellowtransportation = "Your Feet";
+                        color = yellowtransportation;
+                        break;
+                    case ("green"):
+                        string greentransportation = "Giant Squirrel";
+                        color = greentransportation;
+                        break;
+                    case ("indigio"):
+                        string indigotransportation = "Unicorn";
+                        color = indigotransportation;
+                        break;
+                    case ("violet"):
+                        string violettransportation = "Solid Rainbow";
+                        color = violettransportation;
+                        break;
+                }
+
             }
+                switch (color)
+                {
+                    case ("red"):
+                        string redtransportation = "Maserati";
+                        color = redtransportation;
+                        break;
+                    case ("blue"):
+                        string bluetransportation = "The Tardis";
+                        color = bluetransportation;
+                        break;
+                    case ("orange"):
+                        string orangetransportation = "Hot air balloon";
+                        color = orangetransportation;
+                        break;
+                    case ("yellow"):
+                        string yellowtransportation = "Your Feet";
+                        color = yellowtransportation;
+                        break;
+                    case ("green"):
+                        string greentransportation = "Giant Squirrel";
+                        color = greentransportation;
+                        break;
+                    case ("indigio"):
+                        string indigotransportation = "Unicorn";
+                        color = indigotransportation;
+                        break;
+                    case ("violet"):
+                        string violettransportation = "Solid Rainbow";
+                        color = violettransportation;
+                        break;
+                }
 
 
-            Console.WriteLine("\nWhat is your birth month? Ex: October = 10");
-            int birthmonth = int.Parse(Console.ReadLine());
-            float janaprilcash = 1000000.00f;
-            float mayaugustcash = 500000.00f;
-            float septdecemcash = .02f;
-            if (birthmonth>=1&&birthmonth<=4)
-            {
-                Console.WriteLine("You will have $" + janaprilcash + " in the bank.");
+                //Sibling Info
+                Console.WriteLine("\nHow many siblings do you have?");
+                int siblings = int.Parse(Console.ReadLine());
+                string oddsib = "The Arctic Circle";
+                string vacation = "";
+                switch (siblings)
+                {
+                    case (1):
+                        string onesib = "the crab nebula";
+                        vacation = onesib;
+                        break;
+                    case 2:
+                        string twosib = "a Deserted Alley";
+                        vacation = twosib;
+                        break;
+                    case 3:
+                        string threesib = "the Center of the Earth";
+                        vacation = threesib;
+                        break;
+                    default:
+                        vacation = oddsib;
+                        break;
+                }
+                //End Game
+                Console.WriteLine("Thanks for playing! Here is your fortune:");
+                Console.Write(firstname + " " + lastname + " will retire in " +years+ " with $" + birthmonth + " in the bank, a vacation home in " + vacation+" and a " + color+"\n for transportation.\a\n");
             }
-            else if (birthmonth >= 5 && birthmonth <= 8)
-            {
-                Console.WriteLine("You will have $" + mayaugustcash + " in the bank.");
-            }
-            else if (birthmonth >= 9 && birthmonth <= 12)
-            {
-                Console.WriteLine("You will have $" + septdecemcash + " in the bank.");
-            }
-            else
-            {
-                Console.WriteLine("You will have $0.00 in the bank.");
-            }
-
-            Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
-            Console.WriteLine("If you would a list of ROYGBIV colors type help.");
-            string color = Console.ReadLine();
-            string redtransportation = "Maserati";
-            string orangetransportation = "Hot air balloon";
-            string yellowtransportation = "Your Feet";
-            string greentransportation = "Giant Squirrel";
-            string bluetransportation = "The Tardis";
-            string indigotransportation = "Unicorn";
-            string violettransportation = "Solid Rainbows";
-            string help = color.ToLower();
-            if (help == "help")
-            {
-                Console.Write("\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet\n");
-                Console.WriteLine("\nWhat is your favorite ROYGBIV color?");  
-                string helpcolor = Console.ReadLine();
-                color = helpcolor.ToLower();
-            }
-
-            switch (color)
-            {
-                case ("red"):
-                    Console.WriteLine("Your main mode of transportation will be "+redtransportation+".");
-                    break;
-                case ("blue"):
-                    Console.WriteLine("Your main mode of transportation will be "+bluetransportation+".");
-                    break;
-                case ("orange"):
-                    Console.WriteLine("Your main mode of transportation will be " + orangetransportation + ".");
-                    break;
-                case ("yellow"):
-                    Console.WriteLine("Your main mode of transportation will be " + yellowtransportation + ".");
-                    break;
-                case ("green"):
-                    Console.WriteLine("Your main mode of transportation will be " + greentransportation + ".");
-                    break;
-                case ("indigio"):
-                    Console.WriteLine("Your main mode of transportation will be " + indigotransportation + ".");
-                    break;
-                case ("violet"):
-                    Console.WriteLine("Your main mode of transportation will be " + violettransportation + ".");
-                    break;
-            }
-
-
         }
-    }
-}
+    }            
