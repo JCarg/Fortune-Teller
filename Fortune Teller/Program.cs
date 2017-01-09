@@ -143,7 +143,11 @@ namespace Fortune_Teller
                 string vacation = "";
                 switch (siblings)
                 {
-                    case (1):
+                    case 0:
+                    string nosib = "Ancient Rome";
+                    vacation = nosib;
+                    break;
+                    case 1:
                         string onesib = "the crab nebula";
                         vacation = onesib;
                         break;
